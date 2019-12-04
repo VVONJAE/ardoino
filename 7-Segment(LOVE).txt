@@ -1,0 +1,70 @@
+int segmentLED[] = {2,3,4,5,6,7,8,9};
+int segmentNum = 8;
+
+void setup(){
+   Serial.begin(9600);
+   for(int i = 0; i  segmentNum; i++)
+   {
+    pinMode(segmentLED[i],OUTPUT);
+   }
+}
+
+void loop()
+{
+  DisplayL();
+  DisplayO();
+  DisplayV();
+  DisplayE();
+}
+
+void DisplayL()
+{
+  digitalWrite(segmentLED[0],LOW);
+  digitalWrite(segmentLED[1],LOW);
+  digitalWrite(segmentLED[2],HIGH);
+  digitalWrite(segmentLED[3],HIGH);
+  digitalWrite(segmentLED[4],HIGH);
+  digitalWrite(segmentLED[5],HIGH);
+  digitalWrite(segmentLED[6],LOW);
+  digitalWrite(segmentLED[7],HIGH);
+  delay(1000);
+}
+
+void DisplayO()
+{
+  digitalWrite(segmentLED[0],LOW);
+  digitalWrite(segmentLED[1],LOW);
+  digitalWrite(segmentLED[2],LOW);
+  digitalWrite(segmentLED[3],HIGH);
+  digitalWrite(segmentLED[4],LOW);
+  digitalWrite(segmentLED[5],LOW);
+  digitalWrite(segmentLED[6],LOW);
+  digitalWrite(segmentLED[7],HIGH);
+  delay(1000);
+}
+
+void DisplayV()
+{
+  digitalWrite(segmentLED[0],LOW);
+  digitalWrite(segmentLED[1],LOW);
+  digitalWrite(segmentLED[2],LOW);
+  digitalWrite(segmentLED[3],HIGH);
+  digitalWrite(segmentLED[4],LOW);
+  digitalWrite(segmentLED[5],HIGH);
+  digitalWrite(segmentLED[6],LOW);
+  digitalWrite(segmentLED[7],HIGH);
+  delay(1000);
+}
+
+void DisplayE()
+{
+  digitalWrite(segmentLED[0],LOW);
+  digitalWrite(segmentLED[1],LOW);
+  digitalWrite(segmentLED[2],HIGH);
+  digitalWrite(segmentLED[3],HIGH);
+  digitalWrite(segmentLED[4],HIGH);
+  digitalWrite(segmentLED[5],LOW);
+  digitalWrite(segmentLED[6],LOW);
+  digitalWrite(segmentLED[7],LOW);
+  delay(1000);
+}
